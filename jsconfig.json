@@ -1,0 +1,18 @@
+//configuração para permitir o intelicence do vscode funcionando depois de importar o module-alias:
+//para mais info, ver site: https://medium.com/@justintulk/solve-module-import-aliasing-for-webpack-jest-and-vscode-74007ce4adc9
+{
+    "compilerOptions": {
+      "target": "es2017",
+      "allowSyntheticDefaultImports": false,
+      "baseUrl": "./",
+      "paths": {
+        "@app/*": ["src/*"],
+        "@config/*": ["src/config/*"],
+        "@helper/*": ["src/helper/*"],
+        "@model/*": ["src/model/*"],
+        "@server/*": ["src/server/*"],
+        "@controller/*": ["src/controller/*"]
+      }
+    },
+    "exclude": ["node_modules", "dist"]
+  }

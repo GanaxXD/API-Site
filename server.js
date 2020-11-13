@@ -1,13 +1,20 @@
-const express = require('express');
-const app = express();
+require('dotenv').config();
+//Quando usamos o dotenv, ele precisa estar requisitado na primeira linha
 
-app.use('/', (req, res)=> {
-    res.send('hello world');
-})
 
-app.listen(4000, (err)=> {
-    if(err){
-        return console.log('erro');
-    }
-    console.log('iniciou em http://localhost:4000');
-})
+//Adicionando a biblioteca Module-Alias
+require('module-alias/register');
+const boot = require('@service/boot');
+const config = require('@config');
+const mongoose = require('mongoose');
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useCreateIndex', true);
+
+if(config.db.connectionString){
+    mongoose.connect(config.db.connectionString, boot);
+} else {
+    console.log('Sem ceção de uma string de conexão!');
+}
+
+boot();
