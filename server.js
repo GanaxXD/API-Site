@@ -6,15 +6,15 @@ require('dotenv').config();
 require('module-alias/register');
 const boot = require('@service/boot');
 const config = require('@config');
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useCreateIndex', true);
+//mongoose.set('useNewUrlParser', true);
+//mongoose.set('useCreateIndex', true);
 
-if(config.db.connectionString){
+/* if(config.db.connectionString){
     mongoose.connect(config.db.connectionString, boot);
 } else {
     console.log('Sem ceção de uma string de conexão!');
-}
+} */
 
 boot();

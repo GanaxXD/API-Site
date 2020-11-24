@@ -1,5 +1,4 @@
 const Test= require('@model/test');
-const Test = require('../model/test');
 
 const TestController = {
     helloWorld(req, res){

@@ -3,7 +3,9 @@ const app = require('@app');
 
 const config = require('@config');
 
+//O erro vem do banco de dados, no caso o mongoose
 module.exports = (err) => {
+    console.clear();
     if(err){
         console.log('Erro ao conectar ao banco de dados. O seguinte erro está impedindo a sua conexão: ');
         console.log(err);
