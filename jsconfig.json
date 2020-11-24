@@ -11,7 +11,8 @@
         "@helper/*": ["src/helper/*"],
         "@model/*": ["src/model/*"],
         "@server/*": ["src/server/*"],
-        "@controller/*": ["src/controller/*"]
+        "@controller/*": ["src/controller/*"],
+        "@middleware/*": ["src/middleware/*"]
       }
     },
     "exclude": ["node_modules", "dist"]
